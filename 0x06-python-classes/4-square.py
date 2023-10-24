@@ -9,10 +9,12 @@ class Square:
         """Initialize a new Square"""
         self.size = size
 
+    @property
     def size(self):
         """ getter """
         return self.__size
 
+    @size.setter
     def size(self, value):
         """ Setter for private instance attribute size"""
         if not isinstance(size, int):
