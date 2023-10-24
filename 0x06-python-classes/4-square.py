@@ -17,11 +17,11 @@ class Square:
     @size.setter
     def size(self, value):
         """ Setter for private instance attribute size"""
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
 
     def area(self):
         """returns square"""
