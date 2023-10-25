@@ -34,6 +34,7 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
     """ SLL """
 
@@ -43,14 +44,14 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """ insert in a sorted list """
-        if self.__head == None:
+        if self.__head is None:
             self.__head = Node(value, None)
         elif self.__head.data > value:
             new = Node(value, self.__head)
             self.__head = new
         else:
             node = self.__head
-            while node.next_node != None and node.next_node.data < value:
+            while node.next_node is not None and node.next_node.data < value:
                 node = node.next_node
             new = Node(value, node.next_node)
             node.next_node = new
