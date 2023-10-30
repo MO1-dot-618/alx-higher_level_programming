@@ -4,8 +4,14 @@
 
 class Rectangle:
     """Represent a Rectangle """
+
     def __init__(self, width=0, height=0):
-        """Initialize a new instance"""
+        """Initialize a new instance
+
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
         self.width = width
         self.height = height
 
