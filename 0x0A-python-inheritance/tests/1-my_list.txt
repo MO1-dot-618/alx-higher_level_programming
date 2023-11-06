@@ -46,3 +46,12 @@ object.print_sorted()
     >>> list4.print_sorted()
     Traceback (most recent call last):
     TypeError: '<' not supported between instances of 'int' and 'str'
+
+::
+
+    >>> list5 = MyList()
+    >>> list5.append(1)
+    >>> list5.append(1)
+    >>> list5.append(1)
+    >>> list5.print_sorted()
+    [1, 1, 1]
