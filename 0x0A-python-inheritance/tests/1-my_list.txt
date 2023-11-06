@@ -37,3 +37,12 @@ object.print_sorted()
     >>> list3.append(-6)
     >>> list3.print_sorted()
     [inf, nan, -6, 8]
+
+::
+
+    >>> list4 = MyList()
+    >>> list4.append('string')
+    >>> list4.append(8)
+    >>> list4.print_sorted()
+    Traceback (most recent call last):
+    TypeError: '<' not supported between instances of 'int' and 'str'
