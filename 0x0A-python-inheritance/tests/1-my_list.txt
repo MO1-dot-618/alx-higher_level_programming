@@ -1,1 +1,39 @@
-[ 1, 4, 1, 5, 9, 2, 6, 5, -7, 0]
+# 1-my_list.txt
+
+===========================
+How to Use 1-my_list.py
+===========================
+
+print_sorted(self): prints the list, but sorted (ascending sort)
+
+Usage
+=====
+
+object.print_sorted()
+
+::
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> list1 = MyList()
+    >>> list1.append(3)
+    >>> list1.append(-10)
+    >>> list1.append(0)
+    >>> list1.append(1599)
+    >>> list1.print_sorted()
+    [-10, 0, 3, 1599]
+
+::
+
+    >>> list2 = MyList()
+    >>> list2.print_sorted()
+    []
+
+::
+
+    >>> list3 = MyList()
+    >>> list3.append(float('inf'))
+    >>> list3.append(float('nan'))
+    >>> list3.append(8)
+    >>> list3.append(-6)
+    >>> list3.print_sorted()
+    [inf, nan, -6, 8]
