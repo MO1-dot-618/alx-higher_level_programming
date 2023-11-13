@@ -8,7 +8,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new instance"""
-        super().__init__(id) 
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -87,7 +87,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return the print() and str() representation of a Rectangle."""
-        string = "[" + str(self.__class__.__name__) + "] (" + str(self.id) + ") "
-        string += str(self.__x) + "/" + str(self.__y) + " - "
+        string = "[" + str(self.__class__.__name__) + "] (" + str(self.id)
+        string += ") " + str(self.__x) + "/" + str(self.__y) + " - "
         string += str(self.__width) + "/" + str(self.__height)
         return string
