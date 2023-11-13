@@ -30,9 +30,3 @@ class TestBase(unittest.TestCase):
         b = Base(23)
         b.id = 15
         self.assertEqual(15, b.id)
-
-class TestRectangle_init(unittest.TestCase):
-    """ unittests for class Rectangle initialisation """
-
-    def test1(self):
-        r1 = Rectangle()
