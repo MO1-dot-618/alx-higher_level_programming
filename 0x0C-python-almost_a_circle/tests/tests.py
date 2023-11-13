@@ -112,3 +112,21 @@ class Test_Rectangle_methods(unittest.TestCase):
         r = Rectangle(2, 4, 3, 2, 0)
         display = "\n\n   ##\n   ##\n   ##\n   ##\n"
         self.assertEqual(display, Test_Rectangle_methods.capture_printed(r))
+
+    def test_update1(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89)
+        string = "[Rectangle] (89) 10/10 - 10/10"
+        self.assertEqual(string, str(r1))
+
+    def test_update2(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89, 2, 3, 4, 5)
+        string = "[Rectangle] (89) 4/5 - 2/3"
+        self.assertEqual(string, str(r1))
+
+    def test_update3(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(y=1, width=2, x=3, id=89)
+        string = "[Rectangle] (89) 3/1 - 2/10"
+        self.assertEqual(string, str(r1))

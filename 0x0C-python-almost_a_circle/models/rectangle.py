@@ -91,3 +91,40 @@ class Rectangle(Base):
         string += ") " + str(self.__x) + "/" + str(self.__y) + " - "
         string += str(self.__width) + "/" + str(self.__height)
         return string
+
+    def update(self, *args, **kwargs):
+        """ updates values with *args or **kwargs """
+        idx = 0
+        if args and len(args) < 6 and len(args) != 0:
+            for arg in args:
+                if idx ==0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif idx == 1:
+                    self.width = arg
+                elif idx == 2:
+                    self.height = arg
+                elif idx == 3:
+                    self.x = arg
+                elif idx == 4:
+                    self.y = arg
+                idx += 1
+        elif len(args) >= 6:
+            raise AttributeError("Arguments must be between 1 and 5")
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    if value is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
