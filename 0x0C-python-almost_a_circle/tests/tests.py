@@ -33,6 +33,7 @@ class TestBase(unittest.TestCase):
         b.id = 15
         self.assertEqual(15, b.id)
 
+
 class TestRectangle_init(unittest.TestCase):
     """ unittests for class Rectangle initialisation """
 
@@ -83,6 +84,7 @@ class TestRectangle_init(unittest.TestCase):
     def test_float_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle(5.5, 1)
+
 
 class Test_Rectangle_methods(unittest.TestCase):
     """ test methods __str__ , display, area """

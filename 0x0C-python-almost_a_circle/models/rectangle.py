@@ -97,7 +97,7 @@ class Rectangle(Base):
         idx = 0
         if args and len(args) < 6 and len(args) != 0:
             for arg in args:
-                if idx ==0:
+                if idx == 0:
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
