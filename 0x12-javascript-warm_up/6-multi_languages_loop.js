@@ -4,6 +4,6 @@ const myVar = {
   p: 'Python is cool',
   a: 'JavaScript is amazing'
 };
-for (const line in myVar) { 
-console.log(myVar[line]);
+for (const line in myVar) {
+  console.log(myVar[line]);
 }
