@@ -2,10 +2,11 @@
 const Rectangle = require('./4-rectangle');
 
 class Square extends Rectangle {
-  constructor(size) {
+  constructor (size) {
     super(size, size);
   }
-  charPrint(c) {
+
+  charPrint (c) {
     const character = c || 'X';
     for (let i = 0; i < this.height; i++) {
       console.log(character.repeat(this.width));
@@ -14,4 +15,3 @@ class Square extends Rectangle {
 }
 
 module.exports = Square;
-
