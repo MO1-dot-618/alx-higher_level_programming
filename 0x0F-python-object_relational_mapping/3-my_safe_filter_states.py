@@ -16,7 +16,7 @@ def listing(username, password, db_name, name):
     cur = conn.cursor()
     query = "SELECT * FROM states WHERE CONVERT(name USING Latin1) \
     COLLATE Latin1_General_CS = %s ORDER BY id ASC"
-    cur.execute(query, (name,)
+    cur.execute(query, (name,))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
