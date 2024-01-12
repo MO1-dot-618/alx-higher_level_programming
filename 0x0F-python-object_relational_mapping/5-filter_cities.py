@@ -14,13 +14,12 @@ def listing(username, password, db_name, name):
         db=db_name, charset="utf8"
     )
     cur = conn.cursor()
-    query = "SELECT cities.id, cities.name, states.name FROM cities \
+    query = "SELECT cities.name FROM cities \
     INNER JOIN states ON states.id = cities.state_id \
     WHERE states.name = %s ORDER BY cities.id ASC"
     cur.execute(query, (name,))
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    print(", ".join(state[0] for state in query_rows))
     cur.close()
     conn.close()
 
