@@ -14,7 +14,9 @@ def listing(username, password, db_name):
         db=db_name, charset="utf8"
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE CONVERT(name USING Latin1) \
+    COLLATE Latin1_General_CS \
+    LIKE 'N%' ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
